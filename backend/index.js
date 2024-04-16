@@ -3,15 +3,15 @@ const sequelize = require('./database');
 const express = require('express');
 const path = require("path")
 const app = express();
-// const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const routers = require('./routes/route')
 const port = process.env.PORT
 const cors = require('cors');
 
 app.use(cors())
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 
-// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(routers);
 

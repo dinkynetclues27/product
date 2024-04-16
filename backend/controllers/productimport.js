@@ -1,7 +1,5 @@
 const XLSX = require('xlsx');
-const sequelize = require('../database')
-const nodemailer = require('nodemailer'); 
-const cron = require('node-cron');
+const sequelize = require('../database');
 const { sendMail } = require('./mail');
 
 
